@@ -1,21 +1,23 @@
-var form = document.getElementById("form");
-    var bYear = document.getElementById("birth-year");
-    var bMonth = document.getElementById("birth-month");
-    var bDate = document.getElementById("birth-date");
 
 function validate(bYear, bMonth, bDate){
-    console.log("reaches here");
-  var bYear1 = parseInt(bYear.value);
-  var bMonth1 = parseInt(bMonth.value);
-   var bDate1 = parseInt(bDate.value);
+    var form = document.getElementById("form").value;
+    var bYear = document.getElementById("birth-year").value;
+    var bMonth = document.getElementById("birth-month").value;
+    var bDate = document.getElementById("birth-date").value;
 
+console.log(bYear, bMonth, bDate);
+
+  var bYear1 = parseInt(bYear);
+  var bMonth1 = parseInt(bMonth);
+   var bDate1 = parseInt(bDate);
+   console.log(bYear1, bMonth1, bDate1);
 
     if(bYear1<1){
-        alert("Wrong birth details");
+        alert("Kindly put in the correct year");
         return false;
     }
     if(bDate1<1 || bDate>31){
-        alert("Wrong birth details");
+        alert("Please correct your Birth Date");
         return false;
     }else{
         true;
