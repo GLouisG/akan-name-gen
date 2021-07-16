@@ -8,7 +8,11 @@ var bMonth = parseInt(birthMonth);
 var bDate = parseInt(birthDate);
 
 function validation(){
-    if(birthy){
-
+    if(bYear<1){
+        return false;
+        alert("Wrong birth details");
+    }else if(bDate<1 || bDate>31){
+        return false;
+        alert("Wrong birth details");
     }
 }
