@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <div class="container">
         <p class="description">This is a simple <a href="https://en.wikipedia.org/wiki/Akan_names">Akan name</a> generator kindly fill in the required details below all of which are compulsary.
             The name originates from the<a href="https://en.wikipedia.org/wiki/Akan_people"> Akan</a> culture in Ghana where names are usually derived based on the day of birth and gender.
         </p>
@@ -23,7 +24,17 @@
             <label for="birth-date">Birth date.</label>
             <input id="birth-date" type="Number" placeholder="DD" required>
             <br><br>
-        </form>
+            
+            <p><strong>Gender</strong></p>
+            <label for="gender">Male</label>
+            <input name="gender" type="radio" value="Male" checked>
+            <label for="gender">Female</label>
+            <input name="gender" type="radio" value="Female" >
+            <br><br>
+            
+            <button type="submit" class="btn btn-primary">Get Your Akan Name!</button>
 
+        </form>
+    </div>
     </body>
 </html>
