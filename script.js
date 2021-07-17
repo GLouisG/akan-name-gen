@@ -25,7 +25,14 @@ function validate(bYear, bMonth, bDate){
     }
 }
 
-var akangen = function(){
+var akanGen = function(){
+    var form = document.getElementById("form").value;
+    var bYear = document.getElementById("birth-year").value;
+    var bMonth = document.getElementById("birth-month").value;
+    var bDate = document.getElementById("birth-date").value;
 
-    
+  var bYear1 = parseInt(bYear);
+  var bMonth1 = parseInt(bMonth);
+   var bDate1 = parseInt(bDate);
+
 }
