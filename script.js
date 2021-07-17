@@ -47,11 +47,11 @@ function akanGen(){
     var century = parseInt(birthYear.slice(0,2));
     var theGender = document.getElementById("genders").value;
     
-    let dayNum = parseInt(((bDate1 + ((2.6*bMonth1)-0.2) -(2*century)+yr+(yr/4)+(century/4))%7));
-    if (dayNum = -6){
-        dayNum = dayNum*(-1);
+    let dayNum = Math.floor((((century/4) -2*century-1) + ((5*yr/4) ) + ((26*(bMonth1+1)/10))+bDate1)%7);
+    if(dayNum < -5){
+        dayNum +=12
     }else{
-        dayNum = dayNum + 5;
+        dayNum +=5;
     }
     
     var mNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
