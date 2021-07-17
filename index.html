@@ -15,7 +15,7 @@
             The name originates from the<a href="https://en.wikipedia.org/wiki/Akan_people"> Akan</a> culture in Ghana where names are usually derived based on the day of birth and gender.
         </p>
 
-        <form onsubmit="return validate()" action = "https://en.wikipedia.org/wiki/Akan_people" id="form">
+        <form onsubmit="return validate()" action = "#" id="form">
             <label for="birth-year">Birth year.</label>
             <input id="birth-year" type="Number" placeholder="YYYY" required>
             <br><br>
@@ -33,10 +33,14 @@
             <input name="gender" type="radio" value="Female" >
             <br><br>
             
-            <button type="submit" class="btn btn-primary">Get Your Akan Name!</button>
+            <button onclick="return akanGen()" type="submit" class="btn btn-primary">Get Your Akan Name!</button>
 
         </form>
-        <p id="result"></p>
+
+        <div class="card">
+            <p id="result"></p> 
+        </div>     
+        
     </div>
     </body>
     <script src="/script.js"></script>
