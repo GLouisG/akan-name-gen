@@ -5,20 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simple Akan Name Generator</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="CSS/styles.css">
-        <link rel="shortcut icon" type="image/gif" href="/images/fofo.gif"/>
+        <link rel="stylesheet" href="./CSS/styles.css">
+        <link rel="shortcut icon" type="image/gif" href="./images/fofo.gif"/>
     </head>
 
     <body>
         <div class="container">
             <h1>AKAN NAME GENERATOR</h1>
         <p class="description">This is a simple <a href="https://en.wikipedia.org/wiki/Akan_names">Akan name</a> generator kindly fill in the required details below all of which are compulsary.
-            The name originates from the<a href="https://en.wikipedia.org/wiki/Akan_people"> Akan</a> culture in Ghana where names are usually derived based on the day of birth and gender.
+            The name originates from the<a href="https://en.wikipedia.org/wiki/Akan_people"> Akan</a> culture in Ghana where names are usually derived based on the day of birth and gender. The lists below shows the expected name for each day depending on the gender.
         </p>
 
         <form onsubmit="return validate()" action = "#" id="form">
             <label for="birth-year">Birth year.</label>
-            <input id="birth-year" type="Number" placeholder="YYYY" required>
+            <input min="2000" id="birth-year" type="Number" placeholder="YYYY" required>
             <br><br>
             <label for="birth-month">Birth month.</label>
             <input id="birth-month" type="Number" placeholder="MM" required>
@@ -27,7 +27,6 @@
             <input id="birth-date" type="Number" placeholder="DD" required>
             <br><br>
             
-            <p><strong>Gender</strong></p>
             <label for="genders">Gender</label>
             <select onchange="akanGen();" id="genders">
                 <option value="Female">Female</option>
@@ -36,7 +35,8 @@
             <br><br>
             
             <button onclick="return akanGen()" type="submit" class="btn btn-primary">Get Your Akan Name!</button>
-
+           <br><br>
+            <input class="btn btn-danger" type="button" onclick="resetFunction()" value="Reset">
         </form>
 
         <div class="card">
@@ -45,5 +45,5 @@
         
     </div>
     </body>
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 </html>

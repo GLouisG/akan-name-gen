@@ -1,3 +1,10 @@
+var form = document.getElementById("form");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+function resetFunction() {
+    document.getElementById("form").reset();
+}
 
 function validate(bYear, bMonth, bDate){
     var form = document.getElementById("form").value;
