@@ -25,7 +25,7 @@ function validate(bYear, bMonth, bDate){
     }
 }
 
-var akanGen = function(){
+function akanGen(){
     var form = document.getElementById("form").value;
     var bYear = document.getElementById("birth-year").value;
     var bMonth = document.getElementById("birth-month").value;
@@ -45,17 +45,24 @@ var akanGen = function(){
     let birthYear = bYear1.toString();
     var yr = parseInt(birthYear.slice(-2));
     var century = parseInt(birthYear.slice(0,2));
+    var theGender = document.getElementById("genders").value;
     
-    let dayNum = parseInt(((bDate1 + ((2.6*bMonth1)-0.2) -(2*century)+yr+(yr/4)+(century/4))%7)*-1);
+    let dayNum = parseInt(((bDate1 + ((2.6*bMonth1)-0.2) -(2*century)+yr+(yr/4)+(century/4))%7));
+    if (dayNum = -6){
+        dayNum = dayNum*(-1);
+    }else{
+        dayNum = dayNum + 5;
+    }
     
     var mNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    var fNames =[ "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa ", "Afua", "Ama"];
-    var gender = document.getElementsByName("gender").value;
-    if(gender = "Female"){
-        var aName = fNames[dayNum];
-        document.getElementById("result").innerHTML = "Your Akan name is " + aName;
-    }else{
-        var aName = mNames[dayNum];
-        document.getElementById("result").innerHTML = "Your Akan name is " + aName;
+    var fNames =["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa ", "Afua", "Ama"];
+    var akanName = "";
+
+    if(theGender === "Female"){
+        var akanName = fNames[dayNum];
+        document.getElementById("result").innerHTML = "Your Akan name is " + akanName;
+    } else if(theGender ==="Male"){
+        var akanName = mNames[dayNum];
+        document.getElementById("result").innerHTML = "Your Akan name is " + akanName;
     }
 }

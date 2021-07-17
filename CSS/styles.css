@@ -13,3 +13,6 @@ background-color: rgba(54, 1, 12, 0.836);
 .card{
     background-color: black;
 }
+#birth-date, #birth-year, #birth-month, #genders {
+    color: black;
+}

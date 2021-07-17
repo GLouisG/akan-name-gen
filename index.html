@@ -28,10 +28,11 @@
             <br><br>
             
             <p><strong>Gender</strong></p>
-            <label for="gender">Male</label>
-            <input name="gender" type="radio" value="Male" checked>
-            <label for="gender">Female</label>
-            <input name="gender" type="radio" value="Female" >
+            <label for="genders">Gender</label>
+            <select onchange="akanGen();" id="genders">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
             <br><br>
             
             <button onclick="return akanGen()" type="submit" class="btn btn-primary">Get Your Akan Name!</button>
