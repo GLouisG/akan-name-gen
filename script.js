@@ -35,4 +35,15 @@ var akanGen = function(){
   var bMonth1 = parseInt(bMonth);
    var bDate1 = parseInt(bDate);
 
+   if(bMonth1<3){
+       bMonth1 += 10;
+       bYear1 -= 1;
+    }else{
+        bMonth1 -= 2;
+    }
+
+    var mNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+    var fNames =[ "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa ", "Afua", "Ama"];
+
+    
 }
