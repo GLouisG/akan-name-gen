@@ -42,10 +42,12 @@ var akanGen = function(){
         bMonth1 -= 2;
     }
 
-    let birthYear = bYear;
-    var Yr = parseInt(birthYear.slice(-2));
-    var C = parseInt(birthYear.slice(0,2));
+    let birthYear = bYear1.toString();
+    var yr = parseInt(birthYear.slice(-2));
+    var century = parseInt(birthYear.slice(0,2));
     
+    let dayNum = parseInt((bDate1 + ((2.6*bMonth1)-0.2) -(2*century)+yr+(yr/4)+(century/4)));
+
     var mNames =["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     var fNames =[ "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa ", "Afua", "Ama"];
 }
